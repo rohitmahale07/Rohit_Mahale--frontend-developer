@@ -157,9 +157,9 @@ export default function Portfolio() {
       period: '2025 - 2026',
       description: 'Developed scalable web applications using React.js, contributing to frontend architecture and implementing modern UI solutions.',
       achievements: [
-        'Architected 5+ responsive web applications',
-        'Optimized user experience through performance improvements',
-        'Collaborated with cross-functional teams on project delivery'
+        'Architected 5+ responsive web applications.',
+        'Optimized user experience through performance improvements.',
+        'Collaborated with cross-functional teams on project delivery.'
       ],
       icon: <Code2 className="w-6 h-6" />
     },
@@ -169,9 +169,9 @@ export default function Portfolio() {
       period: '2023 - 2026',
       description: 'Completed comprehensive computer engineering curriculum with focus on modern web technologies and software development practices.',
       achievements: [
-        'Developed 25+ academic projects across multiple programming languages',
-        'Mastered 10+ modern technologies and frameworks',
-        'Achieved excellent academic performance in technical subjects'
+        'Developed 25+ academic projects across multiple programming languages.',
+        'Mastered 10+ modern technologies and frameworks.',
+        'Achieved excellent academic performance in technical subjects.'
       ],
       icon: <BookOpenText className="w-6 h-6" />
     }
@@ -262,7 +262,7 @@ export default function Portfolio() {
                 ))}
               </div>
 
-              <div className="flex items-center space-x-2 sm:space-x-4">
+              <div className="flex items-center justify-right">
                 <button
                   onClick={() => setDarkMode(!darkMode)}
                   className="p-3 rounded-xl hover:bg-gray-200/50 dark:hover:bg-slate-800/50 transition-all duration-300 hover:scale-110 relative group"
@@ -502,7 +502,7 @@ export default function Portfolio() {
               ))}
             </div>
 
-            <div className="bg-gradient-to-br from-white/70 to-white/40 dark:from-slate-800/70 dark:to-slate-900/40 backdrop-blur-2xl rounded-3xl p-12 shadow-2xl border border-white/20 dark:border-slate-700/50">
+            <div className="bg-gradient-to-br from-white/70 to-white/40 dark:from-slate-800/70 dark:to-slate-900/40 backdrop-blur-2xl rounded-3xl p-8 md:p-12 shadow-2xl border border-white/20 dark:border-slate-700/50">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                   <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
@@ -529,7 +529,7 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-3 md:gap-6">
                   {achievements.map((achievement, idx) => (
                     <div
                       key={idx}
@@ -678,7 +678,7 @@ export default function Portfolio() {
                     <div className="flex gap-4">
                       <a
                         href={project.live}
-                        className="w-full group/btn flex items-center justify-center gap-2 px-3 md:px-6 py-1 md:py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                        className="w-full group/btn flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                       >
                         <ExternalLink className="w-5 h-5 group-hover/btn:rotate-45 transition-transform duration-300" />
                         View
@@ -727,7 +727,7 @@ export default function Portfolio() {
                     </div>
                     
                     <div className="flex gap-3">
-                      <a href={project.live} className="w-full text-center px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors">
+                      <a href={project.live} className="w-full text-center px-6 py-3 bg-blue-600 text-white rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors">
                         View
                       </a>
                     </div>
@@ -785,9 +785,9 @@ export default function Portfolio() {
                     </div>
 
                     {/* Mobile Layout */}
-                    <div className="flex md:hidden w-full pl-12">
+                    <div className="flex md:hidden w-full">
                       <div className="w-full">
-                        <div className="mb-3">
+                        <div className="mb-3 ml-10">
                           <span className="inline-block px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700">
                             {exp.period}
                           </span>
@@ -823,39 +823,78 @@ export default function Portfolio() {
                     </div>
 
                     {/* Desktop Layout */}
-                    <div className="hidden md:flex w-full">
-                      <div className={`flex-1 ${idx % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                        <div className="inline-block">
-                          <span className="inline-block px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium mb-4 border border-slate-200 dark:border-slate-700">
-                            {exp.period}
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="flex-1">
-                        <div className="bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200/50 dark:border-slate-700/50 hover:-translate-y-1">
-                          <div className="mb-4">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                              {exp.title}
-                            </h3>
-                            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
-                              {exp.company}
-                            </p>
-                            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                              {exp.description}
-                            </p>
+                    <div className="hidden md:flex w-full items-center">
+                      {idx % 2 === 0 ? (
+                        <>
+                          {/* Even index: Period on left, Card on right */}
+                          <div className="flex-1 text-right pr-8">
+                            <div className="inline-block">
+                              <span className="inline-block px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium mb-4 border border-slate-200 dark:border-slate-700">
+                                {exp.period}
+                              </span>
+                            </div>
                           </div>
-                          
-                          <div className="space-y-2">
-                            {exp.achievements.map((achievement, achIdx) => (
-                              <div key={achIdx} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                                <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex-shrink-0"></div>
-                                <span>{achievement}</span>
+                          <div className="flex-1">
+                            <div className="bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200/50 dark:border-slate-700/50 hover:-translate-y-1">
+                              <div className="mb-4">
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                                  {exp.title}
+                                </h3>
+                                <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                                  {exp.company}
+                                </p>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                  {exp.description}
+                                </p>
                               </div>
-                            ))}
+                              
+                              <div className="space-y-2">
+                                {exp.achievements.map((achievement, achIdx) => (
+                                  <div key={achIdx} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex-shrink-0"></div>
+                                    <span>{achievement}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
+                        </>
+                      ) : (
+                        <>
+                          {/* Odd index: Card on left, Period on right */}
+                          <div className="flex-1">
+                            <div className="bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200/50 dark:border-slate-700/50 hover:-translate-y-1">
+                              <div className="mb-4">
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                                  {exp.title}
+                                </h3>
+                                <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                                  {exp.company}
+                                </p>
+                                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                  {exp.description}
+                                </p>
+                              </div>
+                              
+                              <div className="space-y-2">
+                                {exp.achievements.map((achievement, achIdx) => (
+                                  <div key={achIdx} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                    <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex-shrink-0"></div>
+                                    <span>{achievement}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex-1 text-left pl-8">
+                            <div className="inline-block">
+                              <span className="inline-block px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full text-sm font-medium mb-4 border border-slate-200 dark:border-slate-700">
+                                {exp.period}
+                              </span>
+                            </div>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
                 ))}
