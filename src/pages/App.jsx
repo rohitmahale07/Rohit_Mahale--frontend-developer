@@ -1021,8 +1021,8 @@ export default function Portfolio() {
           >
         <footer className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-slate-900/50 backdrop-blur-xl border-t border-gray-200/50 dark:border-slate-800/50">
           <div className="max-w-7xl mx-auto">
-            <div className="flex justify-between space-y-6">
-              <div className="text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 space-y-6">
+              <div className="text-left md:text-left">
                 <div className="text-xl sm:text-2xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                   {'<Rohit Mahale/>'}
                 </div>
@@ -1031,7 +1031,7 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <div className="flex justify-center">
+              <div className="flex justify-left md:justify-center">
                 <div className="flex gap-3 sm:gap-4">
                   {[
                     { 
@@ -1066,7 +1066,7 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              <div className="text-center text-gray-600 dark:text-gray-400 text-sm">
+              <div className="text-left md:text-right text-gray-600 dark:text-gray-400 text-sm">
                 <p>© {new Date().getFullYear()} Rohit Mahale</p>
                 <p>Built with React, JavaScript & Tailwind CSS</p>
               </div>
