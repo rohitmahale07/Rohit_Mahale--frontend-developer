@@ -235,7 +235,7 @@ export default function Portfolio() {
             <div className="flex justify-between items-center h-20">
               <div className="flex-shrink-0 group">
                 <div className="relative">
-                  <span className="text-2xl md:text-4xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 inline-block">
+                  <span className="text-3xl md:text-4xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 inline-block">
                     Rohit Mahale
                   </span>
                   <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
