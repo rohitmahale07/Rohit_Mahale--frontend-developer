@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Mail, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 export default function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
