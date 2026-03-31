@@ -1021,7 +1021,7 @@ export default function Portfolio() {
           >
         <footer className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-slate-900/50 backdrop-blur-xl border-t border-gray-200/50 dark:border-slate-800/50">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col space-y-6">
+            <div className="flex justify-between space-y-6">
               <div className="text-center">
                 <div className="text-xl sm:text-2xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                   {'<Rohit Mahale/>'}
