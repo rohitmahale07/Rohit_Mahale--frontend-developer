@@ -6,9 +6,8 @@ import ClientBackImage from '../assets/ClientBackImage.jpg'
 import ProjectDeliverImage from '../assets/ProjectDeliverImage.jpeg'
 import CodeCommitImage from '../assets/codecommitImage.jpg'
 import YearExperienceImage from '../assets/YearExperienceImage.jpg'
-import WhatsAppLogo from '../assets/whatsapp_logo.png'
-import { Mail, ExternalLink, Code2, Briefcase, User, Download, Moon, Sun, Menu, X, ArrowRight, Sparkles, Zap, Globe, Layers, Terminal,
-  Database, Phone, GitBranch, Award, TrendingUp, Coffee, BookOpenText } from 'lucide-react';
+import { Mail, ExternalLink, Code2, Briefcase, User, Download, Moon, Sun, Menu, X, ArrowRight, Sparkles, Zap, Layers, Terminal,
+  GitBranch, Award, TrendingUp, Coffee, BookOpenText } from 'lucide-react';
 import { FaLinkedin, FaGithub, FaPython, FaJava, FaJs } from "react-icons/fa";
 import { SiVercel } from "react-icons/si";
 import FloatingCTA from '../components/CTAbuttons';
@@ -21,11 +20,6 @@ export default function Portfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorVariant, setCursorVariant] = useState('default');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
 
   useEffect(() => {
     // Initialize theme from localStorage or default to light (false)
@@ -88,12 +82,6 @@ export default function Portfolio() {
       element.scrollIntoView({ behavior: 'smooth' });
       setMobileMenuOpen(false);
     }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
   };
 
   const skills = {
