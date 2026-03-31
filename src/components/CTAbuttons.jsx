@@ -22,23 +22,6 @@ export default function FloatingCTA() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const ctaButtons = [
-    {
-      icon: <MessageCircle className="w-5 h-5" />,
-      label: "WhatsApp",
-      href: "https://wa.me/919924060875?",
-      color: "bg-green-500 hover:bg-green-600",
-      ariaLabel: "Chat on WhatsApp"
-    },
-    {
-      icon: <Mail className="w-5 h-5" />,
-      label: "Email",
-      href: "mailto:rohitmahale0020@gmail.com?subject=Inquiry%20from%20Website",
-      color: "bg-purple-500 hover:bg-purple-600",
-      ariaLabel: "Send Email"
-    }
-  ];
-
   return (
     <AnimatePresence>
       {isVisible && (
